@@ -1,0 +1,12 @@
+name: Workflow to get wrike ticket id
+on: [push]
+
+jobs:
+  build:
+    name: get wrike id from branch name
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: yarn
+    - uses: nelonoel/branch-name@v1
+    - run: echo ${BRANCH_NAME}
