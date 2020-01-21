@@ -1,12 +1,12 @@
-name: A workflow for my Hello World file
-on: push
+name: Workflow to get wrike ticket id
+on: [push]
 
-jobs:
+ jobs:
   build:
-    name: Hello world action
+    name: get wrike id from branch name
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: ./action-a
-      env:
-        MY_NAME: "Mona"
+    - run: yarn
+    - uses: nelonoel/branch-name@v1
+    - run: echo ${BRANCH_NAME}
