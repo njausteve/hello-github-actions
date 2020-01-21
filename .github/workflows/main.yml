@@ -1,7 +1,7 @@
 name: Workflow to get wrike ticket id
 on: [push]
 
- jobs:
+jobs:
   build:
     name: get wrike id from branch name
     runs-on: ubuntu-latest
