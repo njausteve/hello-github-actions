@@ -6,13 +6,12 @@ jobs:
     name: Hello world action
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Hello world action step
-      id: hello
-      uses: njausteve/hello-world-javascript-action@v1
-      with:
-        who-to-greet: "Stephen Njau"
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
-
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        id: hello
+        uses: njausteve/hello-world-javascript-action
+        with:
+          who-to-greet: "Stephen Njau"
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
