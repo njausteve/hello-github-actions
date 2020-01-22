@@ -12,7 +12,7 @@ jobs:
         id: hello
         uses: njausteve/hello-world-javascript-action/@master
         with:
-          who-to-greet: "njauseteviedd"
+          who-to-greet: "jhkkjkijkojoj"
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Branch name
